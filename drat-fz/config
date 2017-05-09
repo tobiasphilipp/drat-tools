@@ -1,0 +1,3 @@
+Solver=../tools/[your solver],-verb=0;
+Reference-Verificator=../tools/[your reference],-f;
+Fuzzer=../tools/[formula fuzzer]|../tools/[formula fuzzer];

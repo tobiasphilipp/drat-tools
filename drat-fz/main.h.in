@@ -1,0 +1,37 @@
+ #include <iostream>
+ #include <string.h>
+ #include <vector>
+ 
+
+int unsat =0; 
+bool SAT;
+std::string path = "@TOOLS_PATH@";
+
+//evaluation
+std::vector<int> n_vars;
+std::vector<int> n_clauses;
+std::vector<int> n_proof_clauses;
+
+//configuration
+std::string solver;
+std::vector<std::string> solver_arguments;
+std::vector<std::string> ref_verificator_arguments;
+std::vector<std::string> verificator_arguments;
+std::string ref_verificator;
+std::vector<std::string> fuzzer;
+std::vector<std::vector<std::string> > fuzzer_arguments;
+
+
+//options
+std::string verificator; 
+int count;   
+int    deletion_info; 
+bool tautologies;
+int method;
+bool specific_cnf;
+
+
+//cast
+const char **arg_solver; 
+const char **arg_ref_verificator; 
+const char **arg_verificator; 
