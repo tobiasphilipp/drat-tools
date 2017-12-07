@@ -207,6 +207,6 @@ convertFormula :: C.DimacsCNF -> Formula
 convertFormula = map (map convertLiteral) . C.clauses
 
 convertProof :: D.ProofSequence -> Labeled_clause_list
-convertProof = map convertCl . D.pClauses
+convertProof = reverse . map convertCl . D.pClauses
   where
     convertCl (op, cl) = let op' = if op == D.ADD then Add else Del in Pair op' (map convertLiteral cl)
